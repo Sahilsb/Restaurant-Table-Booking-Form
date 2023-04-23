@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <style>
-  body {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  color: #e7dede;
-  background-image: url('https://media.istockphoto.com/id/1191879835/photo/empty-tabletop-in-the-coffe-shop.jpg?s=612x612&w=0&k=20&c=0ng1OHRLWiD0cVHdYZbmARj0fyR0HQ35BOFF7Ry8Qqs=');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
- }
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      color: #e7dede;
+      background-image: url('https://media.istockphoto.com/id/1191879835/photo/empty-tabletop-in-the-coffe-shop.jpg?s=612x612&w=0&k=20&c=0ng1OHRLWiD0cVHdYZbmARj0fyR0HQ35BOFF7Ry8Qqs=');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+     }
+    
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 60px;
+      background-color: #050101;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(73, 31, 31, 0.5);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.3);
+    }
+    
+    input[type="submit"] {
+      background-color: #008CBA;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #005F7F;
+    }
+    footer{
+    font-family: Arial, sans-serif;
+	   	font-size: 20px;
+      text-align: center;
+		  color: #f9f6f6;
+     }
+        </style>
 
-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 60px;
-  background-color: #050101;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(73, 31, 31, 0.5);
-}
 
-h1 {
-  text-align: center;
-}
 
-label {
-  display: block;
-  margin-bottom: 10px;
-}
+  <script src="script.js"></script>
+   <script> 
+      function submitForm() { 
+        alert("Thank you for booking a table!"); 
+      } 
+    </script>
 
-input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.3);
-}
-
-input[type="submit"] {
-  background-color: #008CBA;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #005F7F;
-}
-    </style>
     <title>Restaurant Table Booking Form</title>
-  </head>
+</head>
 
   <body>
-    <h1>Table Booking Form</h1>
-    <form action="booking.html" method="post">
+    <header>
+      <h1>Table Booking Form </h1>
+    </header>
+    <br>
+   
+
+    <main>
+     <form action="booking.html" method="post" onsubmit="submitForm()">
       <label for="date">Date:</label>
       <input type="date" id="date" name="date" required><br><br>
 
@@ -74,9 +97,16 @@ input[type="submit"]:hover {
       <input type="email" id="email" name="email" required><br><br>
 
       <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter your 10-digit phone number"><br><br>
+
 
       <input type="submit" value="Submit">
-    </form>
+     </form>
+  </main>
+
+  <footer> 
+    <h3>For more information:</h3>
+    <h3>Contact at badgujarsahil1751@gmail.com</h3>
+  </footer>
   </body>
 </html>
